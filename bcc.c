@@ -6,14 +6,6 @@
 
 int
 x86_start(char *src, char *as) {
-	FILE *source = fopen(src, "r"); 
-    FILE *assembled = fopen(as, "a+");
-	fprintf(assembled, ".section .text\n");
-	fprintf(assembled, "_start:\n");
-	fprintf(assembled, "jmp main\n");
-	fprintf(assembled, "movl $1, %%eax\n");
-	fprintf(assembled, "xorl %%ebx, %%ebx\n");
-	fprintf(assembled, "int $0x80\n"); 
 	compile_x86(src, as);
 	exit(0);
 }
