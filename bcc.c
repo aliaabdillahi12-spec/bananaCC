@@ -14,10 +14,7 @@ x86_start(char *src, char *as) {
 	fprintf(assembled, "movl $1, %%eax\n");
 	fprintf(assembled, "xorl %%ebx, %%ebx\n");
 	fprintf(assembled, "int $0x80\n"); 
-
-	fprintf(assembled, "main:\n");
 	compile_x86(src, as);
-	fprintf(assembled, "ret\n");
 	exit(0);
 }
 
