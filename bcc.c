@@ -6,7 +6,7 @@
 
 int
 x86_start(char *src, char *as) {
-	FILE *source = fopen(src, "r"); /* cano geel */
+	FILE *source = fopen(src, "r"); 
     FILE *assembled = fopen(as, "a+");
 	fprintf(assembled, ".section .text\n");
 	fprintf(assembled, "_start:\n");
